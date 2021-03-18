@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='assets/fullcalendar/main.css' rel='stylesheet' />
+    <script src='assets/fullcalendar/main.js'></script>
+    <script src='assets/fullcalendar/core/locales-all.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'listMonth',
+            locale: 'pt-br',
+            header: {
+                left: 'title',
+                center: '',
+                right: 'prev,next'
+             },
+            events:[
+                {
+                title  : 'event1',
+                start  : '2021-03-17'
+                },
+                {
+                title  : 'event2',
+                start  : '2021-03-05T20:30:00',
+                end: '2021-03-05T21:15:00'
+                },
+                {
+                title  : 'event3',
+                start  : '2021-03-05T12:30:00',
+                allDay : false // will make the time show
+                }
+            ]
+          });
+          calendar.render();
+        });
+
+      </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>DevSoft</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="assets/img/fatec.png" alt="" class="logo">
+    </div>
+    <section id="content-opcoes">
+        <div class="opcoes">
+            <h2>Professor</h2>
+            <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo nobis excepturi distinctio dolorem? Incidunt ipsum assumenda, in, expedita cumque pariatur molestias culpa, maxime voluptatum molestiae nisi voluptas recusandae reprehenderit.
+            </div>
+            <button class="btnAcesso">Acesso</button>
+        </div>
+        <div class="opcoes">
+            <h2>Aluno</h2>
+            <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo nobis excepturi distinctio dolorem? Incidunt ipsum assumenda, in, expedita cumque pariatur molestias culpa, maxime voluptatum molestiae nisi voluptas recusandae reprehenderit.
+            </div>
+            <button class="btnAcesso">Acesso</button>
+        </div>
+        <!-- <div id='calendar'></div> -->
+
+    </section>
+</body>
+</html>
