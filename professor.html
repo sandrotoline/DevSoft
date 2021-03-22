@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='assets/fullcalendar/main.css' rel='stylesheet' />
+    <script src='assets/fullcalendar/main.js'></script>
+    <script src='assets/fullcalendar/core/locales-all.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'listMonth',
+            locale: 'pt-br',
+            header: {
+                left: 'title',
+                center: '',
+                right: 'prev,next'
+             },
+            events:[
+                {
+                title  : 'event1',
+                start  : '2021-03-17'
+                },
+                {
+                title  : 'event2',
+                start  : '2021-03-05T20:30:00',
+                end: '2021-03-05T21:15:00'
+                },
+                {
+                title  : 'event3',
+                start  : '2021-03-05T12:30:00',
+                allDay : false // will make the time show
+                }
+            ]
+          });
+          calendar.render();
+        });
+
+      </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>DevSoft</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="assets/img/fatec.png" alt="" class="logo">
+    </div>
+    <section id="content-opcoes">
+        <div class="professor">
+            <h2>Professor</h2>
+            <div class="content">
+                <label for="">Aluno:</label>
+                <label for="lblAluno"></label>                
+            </div>
+            <div class="content">
+                <label for="">Tema TG:</label>
+                <label for="lblTemaTG"></label>                
+            </div>
+            <div class="content">
+                <label for="">Orientador:</label>
+                <label for="lblOrientador"></label>                
+            </div>
+            <div class="content">
+                <label for="">Professor 1:</label>
+                <label for="lblProfessor1"></label>                
+            </div>
+            <div class="content">
+                <label for="">Professor 2:</label>
+                <label for="lblProfessor2"></label>                
+            </div>
+            <div class="content">
+                <label for="">Data:</label>
+                <label for="lblData"></label>                
+            </div>
+            <div class="content">
+                <label for="">Horario:</label>
+                <label for="lblHorario"></label>                
+            </div>
+            <div class="content">
+                <label for="">E-mail:</label>
+                <label for="lblEmail"></label>                
+            </div>
+            <div class="content">
+                <button class="btnAceitar">Aceitar</button>
+                <button class="btnRecusar">Recusar</button>
+            </div>      
+        </div>
+        <div class="professor">
+            <h2>Lista de TGs Agendados</h2>
+            <div class="content">
+                
+            </div>
+        </div>
+        <!-- <div id='calendar'></div> -->
+
+    </section>
+</body>
+</html>
