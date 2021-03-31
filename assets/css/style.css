@@ -5,16 +5,36 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
 }
 /* =========================== RESET */
-.logo{
-    max-width: 400px;
+.gradient{
+    background: linear-gradient(135deg, #eb5757, #000000);
+    min-height: 100vh;
+}
+.logoFatec{
+    width: 250px;
     text-align: center;
-    margin: 20px auto;
+    margin: auto;
+    filter: brightness(0) invert(1);
+}
+.logo{
+    width: 300px;
+    text-align: center;
+    margin: 30px auto;
+    filter: brightness(0) invert(1);
+}
+.input-professor {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.label{
+    color: white;
+    text-align: left;
 }
 #content-opcoes{
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
     text-align: center;
 }
 #content-opcoes > .opcoes {
@@ -25,6 +45,7 @@ body{
     min-height: 200px; 
     border: solid 1px #c8c8c8;
     border-radius: 10px;
+    background-color: #f7f7f7;
 }
 
 #content-opcoes > .opcoes > h2{
@@ -33,23 +54,31 @@ body{
 }
 .btnAcesso{
     padding: 10px;
-    background-color: cornflowerblue;
+    background: #ed213a;
+    border: solid 2px #ed213a;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
     width: 90%;
     margin: 10px auto;
-    border:none;
     font-weight: bold;
     cursor: pointer;
+    display: block;
     text-transform: uppercase;
-    transition: all ease-in 0.2;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .btnAcesso:hover{
-    background-color: darkblue;
-    transition: all ease-in 0.2;
+    background:  transparent;
+    color: #ed213a;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 .content{
     padding: 10px;
@@ -57,15 +86,40 @@ body{
     width: 90%;
     margin: 0 auto;
 }
-
-.btnAceitar{
-    padding: 10px;
-    background-color: cornflowerblue;
+.btnAgendar{
+    width: 100%;
+    background-color: #777;
+    border: solid 2px #777;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    width: 90%;
+    margin: 10px auto;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    padding: 10px;
+}
+.btnAgendar:hover{
+    background-color: transparent;
+    border: solid 2px #333;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.btnAceitar{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: 49.5%;
     margin: 10px auto;
     border:none;
     font-weight: bold;
@@ -76,12 +130,12 @@ body{
 
 .btnRecusar{
     padding: 10px;
-    background-color: cornflowerblue;
+    background-color: red;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    width: 90%;
+    width: 49.5%;
     margin: 10px auto;
     border:none;
     font-weight: bold;
